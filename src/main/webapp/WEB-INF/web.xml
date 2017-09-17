@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This web.xml file is not required when using Servlet 3.0 container,
+     see implementation details http://jersey.java.net/nonav/documentation/latest/jax-rs.html -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>myTeam.Davide.myWebapp288</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <url-pattern>/webapi/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletNomeCognome</display-name>
+    <servlet-name>ServletNomeCognome</servlet-name>
+    <servlet-class>com.dede.first.ServletNomeCognome</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletNomeCognome</servlet-name>
+    <url-pattern>/ServletNomeCognome</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>This servlet is used for the data receiving</description>
+    <display-name>ServletNC</display-name>
+    <servlet-name>ServletNC</servlet-name>
+    <servlet-class>com.dede.first.ServletNC</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletNC</servlet-name>
+    <url-pattern>/action.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletUsers</display-name>
+    <servlet-name>ServletUsers</servlet-name>
+    <servlet-class>com.dede.first.ServletUsers</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletUsers</servlet-name>
+    <url-pattern>/getAllUsers.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletSingleUser</display-name>
+    <servlet-name>ServletSingleUser</servlet-name>
+    <servlet-class>com.dede.first.ServletSingleUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletSingleUser</servlet-name>
+    <url-pattern>/getSingleUser.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletLogIn</display-name>
+    <servlet-name>ServletLogIn</servlet-name>
+    <servlet-class>com.dede.first.ServletLogIn</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletLogIn</servlet-name>
+    <url-pattern>/login.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletLogOut</display-name>
+    <servlet-name>ServletLogOut</servlet-name>
+    <servlet-class>com.dede.first.ServletLogOut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletLogOut</servlet-name>
+    <url-pattern>/logOut.do</url-pattern>
+  </servlet-mapping>
+</web-app>

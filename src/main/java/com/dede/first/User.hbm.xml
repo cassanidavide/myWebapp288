@@ -1,0 +1,17 @@
+<hibernate-mapping auto-import="true" default-lazy="false"> 
+ <class name="com.dede.first.User" table="users">
+  <id name="ID_USER" column="user_id" type="java.lang.Integer">
+   <generator class="increment"></generator>
+  </id>  
+  <property name="username" column="username" type="java.lang.String"
+   not-null="true" length="10"></property>  
+  <property name="nome" column="nome" type="java.lang.String"
+   not-null="true" length="30"></property>
+  <property name="cognome" column="cognome" type="java.lang.String"
+   not-null="true" length="30"></property> 
+  <property name="email" column="email" type="java.lang.String"
+   not-null="true" length="50"></property> 
+  <property name="pwd" column="pwd" type="java.lang.String"
+   not-null="true" length="30"></property>   
+ </class>  
+</hibernate-mapping>
